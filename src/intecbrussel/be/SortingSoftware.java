@@ -1,9 +1,11 @@
 package intecbrussel.be;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 public class SortingSoftware {
 
@@ -11,7 +13,7 @@ public class SortingSoftware {
 
 
         //Path from the unsorted folder
-        String folder = "/Users/vincenthonca/Desktop/dossier";
+        String folder = "/Users/vincenthonca/Desktop/dossier/unsorted";
 
         Path path = Paths.get(folder);
 
@@ -21,7 +23,15 @@ public class SortingSoftware {
             for (String s : path.toFile().list((dir, name) -> !name.equals(".DS_Store"))) {
                 creatingfileTypeFolder(path.toString(), getFileType(s));
 
+                if (Paths.get(folder, s).toFile().isFile()) {
+                    try {
+                        Files.move(Paths.get(folder, s), Paths.get(folder, getFileType(s), s), StandardCopyOption.REPLACE_EXISTING);
+                    } catch (IOException IOE) {
+                        IOE.printStackTrace();
+                    }
+                }
             }
+            path.toFile().renameTo(Paths.get(path.getParent().toString(), "Sorted").toFile());
         }
 
 
@@ -40,8 +50,8 @@ public class SortingSoftware {
         Path paths = Paths.get(parentFolder, extension);
 
         try {
-
-            Files.createDirectory(paths);
+            if (!paths.toFile().exists())
+                Files.createDirectory(paths);
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
