@@ -1,6 +1,8 @@
 package intecbrussel.be;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -77,7 +79,8 @@ public class SortingSoftware {
 
         /* Methode to write summerize to text file */
 
-        
+
+        summaryToText(summary, Paths.get(sortedFolder.getParent().toString(), "Summary.txt"));
 
 
     }
@@ -169,5 +172,30 @@ public class SortingSoftware {
         }
     }
 
+    private static void summaryToText(TreeSet<File> summary, Path path) {
 
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path.toFile()))) {
+
+            for (File file : summary) {
+
+                if (file.isDirectory()) {
+                    bufferedWriter.write("Directory : " + file);
+                    bufferedWriter.newLine();
+                    bufferedWriter.write("-".repeat(98));
+                    bufferedWriter.newLine();
+                } else if (file.isFile()) {
+                    bufferedWriter.write(String.format("File :%-60sReadable:%-10bWritable:%4b", file.getName()
+                            , Files.isReadable(file.toPath())
+                            , Files.isWritable(file.toPath())));
+                    bufferedWriter.newLine();
+                }
+                bufferedWriter.newLine(); 
+            }
+        } catch (IOException IOE) {
+            IOE.printStackTrace();
+        }
+    }
 }
+
+
+
