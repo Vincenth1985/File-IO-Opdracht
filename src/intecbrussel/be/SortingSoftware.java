@@ -14,9 +14,7 @@ public class SortingSoftware {
 
         //Path from the unsorted folder
         String folder = "/Users/vincenthonca/Desktop/dossier/unsorted";
-
         Path path = Paths.get(folder);
-
 
         if (path.toFile().exists()) {
 
@@ -31,8 +29,19 @@ public class SortingSoftware {
                     }
                 }
             }
+
             path.toFile().renameTo(Paths.get(path.getParent().toString(), "Sorted").toFile());
-        }
+
+        } else System.out.println("No folder with this name found. Please check the unsorted folder path");
+
+
+        /*I write a method that will allow on the basis of a type of file,
+         to search in all the folders and sub folders the corresponding file and then move them to the folders that group all files of the same type.
+         */
+
+        String fileType = "pdf";
+
+        moveFileTypeToTargetFolder(Paths.get(path.getParent().toString(), "Sorted").toFile(), fileType, Paths.get(path.getParent().toString(), "Sorted", fileType).toFile());
 
 
     }
@@ -56,4 +65,23 @@ public class SortingSoftware {
             ioe.printStackTrace();
         }
     }
+
+    private static void moveFileTypeToTargetFolder(File source, String fileType, File targetFolder) {
+
+        try {
+            for (File file : source.listFiles()) {
+                if (file.isDirectory()) {
+                    moveFileTypeToTargetFolder(file, fileType, targetFolder);
+                } else {
+                    if (getFileType(file.getName()).matches(fileType)) {
+                        Files.move(Paths.get(file.getAbsolutePath()), Paths.get(targetFolder.toString(), file.getName()), StandardCopyOption.REPLACE_EXISTING);
+                    }
+                }
+            }
+        } catch (IOException IOE) {
+            IOE.printStackTrace();
+        }
+    }
+
+
 }

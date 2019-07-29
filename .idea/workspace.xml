@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c55ade1-029d-4006-9cea-a9283234e955" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,10 +20,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+            <state relative-caret-position="353">
+              <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#getFileType#0;class#SortingSoftware#0" />
                 <element signature="method#creatingfileTypeFolder#0;class#SortingSoftware#0" />
               </folding>
             </state>
@@ -162,7 +161,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java</url>
-          <line>27</line>
+          <line>25</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -172,10 +171,11 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        <state relative-caret-position="353">
+          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getFileType#0;class#SortingSoftware#0" />
             <element signature="method#creatingfileTypeFolder#0;class#SortingSoftware#0" />
           </folding>
         </state>
