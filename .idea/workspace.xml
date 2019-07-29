@@ -20,14 +20,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+            <state relative-caret-position="315">
+              <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2530#2536#0" expanded="true" />
                 <element signature="method#getFileType#0;class#SortingSoftware#0" />
-                <element signature="method#creatingfileTypeFolder#0;class#SortingSoftware#0" />
+                <element signature="method#creatingFileTypeFolder#0;class#SortingSoftware#0" />
                 <element signature="method#moveFileTypeToTargetFolder#0;class#SortingSoftware#0" />
                 <element signature="method#putAllHiddenFilesInHiddenFolder#0;class#SortingSoftware#0" />
+                <element signature="method#deleteEmptyFolders#0;class#SortingSoftware#0" />
+                <element signature="method#collectFolderToSet#0;class#SortingSoftware#0" />
               </folding>
             </state>
           </provider>
@@ -71,6 +74,17 @@
             <path>
               <item name="File IO Opdracht" type="b2602c69:ProjectViewProjectNode" />
               <item name="File IO Opdracht" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="File IO Opdracht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="File IO Opdracht" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="File IO Opdracht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="File IO Opdracht" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="be" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -143,7 +157,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32970297" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32970297" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32970297" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -163,13 +177,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java</url>
-          <line>25</line>
+          <line>26</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java</url>
-          <line>110</line>
+          <line>121</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
@@ -179,14 +193,17 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+        <state relative-caret-position="315">
+          <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2530#2536#0" expanded="true" />
             <element signature="method#getFileType#0;class#SortingSoftware#0" />
-            <element signature="method#creatingfileTypeFolder#0;class#SortingSoftware#0" />
+            <element signature="method#creatingFileTypeFolder#0;class#SortingSoftware#0" />
             <element signature="method#moveFileTypeToTargetFolder#0;class#SortingSoftware#0" />
             <element signature="method#putAllHiddenFilesInHiddenFolder#0;class#SortingSoftware#0" />
+            <element signature="method#deleteEmptyFolders#0;class#SortingSoftware#0" />
+            <element signature="method#collectFolderToSet#0;class#SortingSoftware#0" />
           </folding>
         </state>
       </provider>

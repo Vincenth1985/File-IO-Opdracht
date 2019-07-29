@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.TreeSet;
 
 public class SortingSoftware {
 
@@ -30,10 +31,10 @@ public class SortingSoftware {
                 }
             }
 
-
             unsortedFolder.toFile().renameTo(Paths.get(unsortedFolder.getParent().toString(), "Sorted").toFile());
 
         } else System.out.println("No folder with this name found. Please check the unsorted folder unsortedFolder");
+
 
 
 
@@ -41,15 +42,15 @@ public class SortingSoftware {
            to search in all the folders and sub folders the corresponding file,
            and then move them to the folders that group all files of the same type.*/
 
+
         Path sortedFolder = Paths.get(unsortedFolder.getParent().toString(), "Sorted");
         String fileType = "pdf";
         moveFileTypeToTargetFolder(sortedFolder.toFile(), fileType, Paths.get(sortedFolder.toString(), fileType).toFile());
 
 
 
-
-        /*I search all folders if there are any hidden files,
-          move them to an appropriate folder */
+        /* I search all folders if there are any hidden files,
+           move them to an appropriate folder */
         try {
             if (!Paths.get(sortedFolder.toString(), "HiddenFiles").toFile().exists()) {
                 Files.createDirectory(Paths.get(sortedFolder.toString(), "HiddenFiles"));
@@ -59,8 +60,20 @@ public class SortingSoftware {
             IOE.printStackTrace();
         }
 
-        /*Looking for empty folders and delete them */
+        /* Looking for empty folders and delete them */
+
         deleteEmptyFolders(sortedFolder.toFile());
+
+
+        /* create here a treeset that will serve me as a summary of my files and file*/
+
+        TreeSet<File> summary = new TreeSet<File>();
+        summary = collectFolderToSet(sortedFolder.toFile(), summary);
+
+
+        /* I create a method that will print the contents of the given folder in parameter*/
+
+       
 
 
     }
@@ -126,4 +139,18 @@ public class SortingSoftware {
         }
 
     }
+
+    private static TreeSet<File> collectFolderToSet(File sourceFolder, TreeSet<File> folderToScan) {
+
+        for (File file : sourceFolder.listFiles()) {
+            if (file.isDirectory()) {
+                folderToScan.add(file);
+                collectFolderToSet(sourceFolder, folderToScan);
+            } else
+                folderToScan.add(file);
+        }
+        return folderToScan;
+    }
+
+
 }
