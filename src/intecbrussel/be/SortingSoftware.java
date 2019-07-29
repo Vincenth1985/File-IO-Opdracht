@@ -33,7 +33,7 @@ public class SortingSoftware {
 
             unsortedFolder.toFile().renameTo(Paths.get(unsortedFolder.getParent().toString(), "Sorted").toFile());
 
-        } else System.out.println("No folder with this name found. Please check the unsorted folder unsortedFolder");
+        } else System.out.println("No folder with this name found. Please check the unsorted folder unsortedFolder\n");
 
 
 
@@ -73,7 +73,11 @@ public class SortingSoftware {
 
         /* I create a method that will print the contents of the given folder in parameter*/
 
-       
+        summaryToConsole(summary);
+
+        /* Methode to write summerize to text file */
+
+        
 
 
     }
@@ -140,16 +144,29 @@ public class SortingSoftware {
 
     }
 
-    private static TreeSet<File> collectFolderToSet(File sourceFolder, TreeSet<File> folderToScan) {
+    private static TreeSet<File> collectFolderToSet(File sourceFolder, TreeSet<File> folderToSummerize) {
 
         for (File file : sourceFolder.listFiles()) {
             if (file.isDirectory()) {
-                folderToScan.add(file);
-                collectFolderToSet(sourceFolder, folderToScan);
+                folderToSummerize.add(file);
+                collectFolderToSet(file, folderToSummerize);
             } else
-                folderToScan.add(file);
+                folderToSummerize.add(file);
         }
-        return folderToScan;
+        return folderToSummerize;
+    }
+
+    private static void summaryToConsole(TreeSet<File> summary) {
+
+        for (File file : summary) {
+            if (file.isDirectory()) {
+                System.out.println("Directory : " + file.getAbsolutePath());
+                System.out.println("-".repeat(file.getAbsolutePath().length() + 12));
+            } else if (file.isFile()) {
+                System.out.println("File : " + file.getName());
+                System.out.println();
+            }
+        }
     }
 
 
