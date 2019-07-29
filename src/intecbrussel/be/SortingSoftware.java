@@ -56,9 +56,11 @@ public class SortingSoftware {
 
             } else putAllHiddenFilesInHiddenFolder(sortedFolder.toFile(), sortedFolder.toFile());
         } catch (IOException IOE) {
-
             IOE.printStackTrace();
         }
+
+        /*Looking for empty folders and delete them */
+        deleteEmptyFolders(sortedFolder.toFile());
 
 
     }
@@ -83,10 +85,10 @@ public class SortingSoftware {
         }
     }
 
-    private static void moveFileTypeToTargetFolder(File source, String fileType, File targetFolder) {
+    private static void moveFileTypeToTargetFolder(File sourceFolder, String fileType, File targetFolder) {
 
         try {
-            for (File file : source.listFiles()) {
+            for (File file : sourceFolder.listFiles()) {
                 if (file.isDirectory()) {
                     moveFileTypeToTargetFolder(file, fileType, targetFolder);
                 } else {
@@ -100,9 +102,9 @@ public class SortingSoftware {
         }
     }
 
-    private static void putAllHiddenFilesInHiddenFolder(File source, File sortedFolder) throws IOException {
+    private static void putAllHiddenFilesInHiddenFolder(File sourceFolder, File sortedFolder) throws IOException {
 
-        for (File file : source.listFiles()) {
+        for (File file : sourceFolder.listFiles()) {
             if (file.isDirectory()) {
                 putAllHiddenFilesInHiddenFolder(file, sortedFolder);
             } else if (file.isHidden()) {
@@ -111,5 +113,17 @@ public class SortingSoftware {
 
 
         }
+    }
+
+    private static void deleteEmptyFolders(File sourceFolder) {
+
+        for (File e : sourceFolder.listFiles()) {
+
+            if (e.isDirectory()) {
+                deleteEmptyFolders(e);
+                e.delete();
+            }
+        }
+
     }
 }

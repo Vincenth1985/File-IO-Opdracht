@@ -20,13 +20,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+            <state relative-caret-position="543">
+              <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getFileType#0;class#SortingSoftware#0" />
                 <element signature="method#creatingfileTypeFolder#0;class#SortingSoftware#0" />
                 <element signature="method#moveFileTypeToTargetFolder#0;class#SortingSoftware#0" />
+                <element signature="method#putAllHiddenFilesInHiddenFolder#0;class#SortingSoftware#0" />
               </folding>
             </state>
           </provider>
@@ -142,7 +143,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32970297" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32970297" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32970297" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -168,13 +169,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java</url>
-          <line>108</line>
+          <line>110</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
@@ -184,13 +179,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        <state relative-caret-position="543">
+          <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getFileType#0;class#SortingSoftware#0" />
             <element signature="method#creatingfileTypeFolder#0;class#SortingSoftware#0" />
             <element signature="method#moveFileTypeToTargetFolder#0;class#SortingSoftware#0" />
+            <element signature="method#putAllHiddenFilesInHiddenFolder#0;class#SortingSoftware#0" />
           </folding>
         </state>
       </provider>
