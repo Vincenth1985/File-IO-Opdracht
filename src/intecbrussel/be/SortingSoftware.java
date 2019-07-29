@@ -14,12 +14,12 @@ public class SortingSoftware {
 
         //Path from the unsorted folder
         String folder = "/Users/vincenthonca/Desktop/dossier/unsorted";
-        Path path = Paths.get(folder);
+        Path unsortedFolder = Paths.get(folder);
 
-        if (path.toFile().exists()) {
+        if (unsortedFolder.toFile().exists()) {
 
-            for (String s : path.toFile().list((dir, name) -> !name.equals(".DS_Store"))) {
-                creatingfileTypeFolder(path.toString(), getFileType(s));
+            for (String s : unsortedFolder.toFile().list((dir, name) -> !name.equals(".DS_Store"))) {
+                creatingFileTypeFolder(unsortedFolder.toString(), getFileType(s));
 
                 if (Paths.get(folder, s).toFile().isFile()) {
                     try {
@@ -30,18 +30,35 @@ public class SortingSoftware {
                 }
             }
 
-            path.toFile().renameTo(Paths.get(path.getParent().toString(), "Sorted").toFile());
 
-        } else System.out.println("No folder with this name found. Please check the unsorted folder path");
+            unsortedFolder.toFile().renameTo(Paths.get(unsortedFolder.getParent().toString(), "Sorted").toFile());
+
+        } else System.out.println("No folder with this name found. Please check the unsorted folder unsortedFolder");
 
 
-        /*I write a method that will allow on the basis of a type of file,
-         to search in all the folders and sub folders the corresponding file and then move them to the folders that group all files of the same type.
-         */
 
+        /* I write a method that will allow on the basis of a type of file,
+           to search in all the folders and sub folders the corresponding file,
+           and then move them to the folders that group all files of the same type.*/
+
+        Path sortedFolder = Paths.get(unsortedFolder.getParent().toString(), "Sorted");
         String fileType = "pdf";
+        moveFileTypeToTargetFolder(sortedFolder.toFile(), fileType, Paths.get(sortedFolder.toString(), fileType).toFile());
 
-        moveFileTypeToTargetFolder(Paths.get(path.getParent().toString(), "Sorted").toFile(), fileType, Paths.get(path.getParent().toString(), "Sorted", fileType).toFile());
+
+
+
+        /*I search all folders if there are any hidden files,
+          move them to an appropriate folder */
+        try {
+            if (!Paths.get(sortedFolder.toString(), "HiddenFiles").toFile().exists()) {
+                Files.createDirectory(Paths.get(sortedFolder.toString(), "HiddenFiles"));
+
+            } else putAllHiddenFilesInHiddenFolder(sortedFolder.toFile(), sortedFolder.toFile());
+        } catch (IOException IOE) {
+
+            IOE.printStackTrace();
+        }
 
 
     }
@@ -54,7 +71,7 @@ public class SortingSoftware {
 
     }
 
-    private static void creatingfileTypeFolder(String parentFolder, String extension) {
+    private static void creatingFileTypeFolder(String parentFolder, String extension) {
 
         Path paths = Paths.get(parentFolder, extension);
 
@@ -83,5 +100,16 @@ public class SortingSoftware {
         }
     }
 
+    private static void putAllHiddenFilesInHiddenFolder(File source, File sortedFolder) throws IOException {
 
+        for (File file : source.listFiles()) {
+            if (file.isDirectory()) {
+                putAllHiddenFilesInHiddenFolder(file, sortedFolder);
+            } else if (file.isHidden()) {
+                Files.move(file.toPath().toAbsolutePath(), Paths.get(sortedFolder.toString(), "HiddenFiles", file.getName()), StandardCopyOption.REPLACE_EXISTING);
+            }
+
+
+        }
+    }
 }
