@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c55ade1-029d-4006-9cea-a9283234e955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/File IO Opdracht/intecbrussel/be/SortingSoftware.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/intecbrussel/be/Main/SortingSoftware.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/intecbrussel/be/Main/SortingSoftware.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/intecbrussel/be/Main/SortingSoftware.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/intecbrussel/be/Services/OperationClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/intecbrussel/be/Services/OperationClass.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/Main/SortingSoftware.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-42">
-              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+            <state relative-caret-position="360">
+              <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,14 +45,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/Services/OperationClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="517">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getFileType#0;class#OperationClass#0" />
                 <element signature="method#creatingFileTypeFolder#0;class#OperationClass#0" />
-                <element signature="method#putAllHiddenFilesInHiddenFolder#0;class#OperationClass#0" />
-                <element signature="method#deleteEmptyFolders#0;class#OperationClass#0" />
                 <element signature="method#moveFileTypeToTargetFolder#0;class#OperationClass#0" />
                 <element signature="method#collectFolderToSet#0;class#OperationClass#0" />
                 <element signature="method#summaryToConsole#0;class#OperationClass#0" />
@@ -82,6 +79,7 @@
         <option value="$PROJECT_DIR$/src/intecbrussel/be/Operation.java" />
         <option value="$PROJECT_DIR$/src/intecbrussel/be/OperationClass.java" />
         <option value="$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java" />
+        <option value="$PROJECT_DIR$/src/intecbrussel/be/Services/OperationClass.java" />
         <option value="$PROJECT_DIR$/src/intecbrussel/be/Main/SortingSoftware.java" />
       </list>
     </option>
@@ -191,7 +189,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32970297" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32970297" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -210,7 +208,41 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/intecbrussel/be/Main/SortingSoftware.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/intecbrussel/be/Main/SortingSoftware.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/Services/OperationClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getFileType#0;class#OperationClass#0" />
+            <element signature="method#creatingFileTypeFolder#0;class#OperationClass#0" />
+            <element signature="method#moveFileTypeToTargetFolder#0;class#OperationClass#0" />
+            <element signature="method#collectFolderToSet#0;class#OperationClass#0" />
+            <element signature="method#summaryToConsole#0;class#OperationClass#0" />
+            <element signature="method#summaryToText#0;class#OperationClass#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/Services/FolderOperations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -221,28 +253,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/Services/OperationClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getFileType#0;class#OperationClass#0" />
-            <element signature="method#creatingFileTypeFolder#0;class#OperationClass#0" />
-            <element signature="method#putAllHiddenFilesInHiddenFolder#0;class#OperationClass#0" />
-            <element signature="method#deleteEmptyFolders#0;class#OperationClass#0" />
-            <element signature="method#moveFileTypeToTargetFolder#0;class#OperationClass#0" />
-            <element signature="method#collectFolderToSet#0;class#OperationClass#0" />
-            <element signature="method#summaryToConsole#0;class#OperationClass#0" />
-            <element signature="method#summaryToText#0;class#OperationClass#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/Main/SortingSoftware.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        <state relative-caret-position="360">
+          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

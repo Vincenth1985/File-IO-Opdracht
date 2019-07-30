@@ -32,19 +32,22 @@ public class OperationClass implements FolderOperations {
 
     @Override
     public void putAllHiddenFilesInHiddenFolder(File sourceFolder, File sortedFolder) {
-        for (File file : sourceFolder.listFiles()) {
-            if (file.isDirectory()) {
-                putAllHiddenFilesInHiddenFolder(file, sortedFolder);
-            } else if (file.isHidden()) {
-                try {
-                    Files.move(file.toPath().toAbsolutePath(), Paths.get(sortedFolder.toString(), "HiddenFiles", file.getName())
-                            , StandardCopyOption.REPLACE_EXISTING);
-                } catch (IOException e) {
-                    e.printStackTrace();
+
+            for (File file : sourceFolder.listFiles()) {
+                if (file.isDirectory()) {
+                    putAllHiddenFilesInHiddenFolder(file, sortedFolder);
+                } else if (file.isHidden()) {
+
+                    try {
+                        Files.move(file.toPath().toAbsolutePath(), Paths.get(sortedFolder.toString(), "HiddenFiles", file.getName())
+                                , StandardCopyOption.REPLACE_EXISTING);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
-            }
-        }
-    }
+
+    }}
+
 
     @Override
     public void deleteEmptyFolders(File sourceFolder) {
@@ -126,5 +129,5 @@ public class OperationClass implements FolderOperations {
         }
     }
 
-    }
+}
 

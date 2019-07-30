@@ -15,7 +15,7 @@ public class SortingSoftware {
     public static void main(String[] args) {
 
 
-        //Path from the unsorted folder.Here we have to give the pad from the Unsorted Folder.
+        //Path from the unsorted folder.Here we have to give the path from the Unsorted Folder.
         String folder = "/Users/vincenthonca/Desktop/dossier/unsorted";
         Path unsortedFolder = Paths.get(folder);
         OperationClass operations = new OperationClass();
@@ -52,13 +52,15 @@ public class SortingSoftware {
 
         /* I search all folders if there are any hidden files,
            move them to an appropriate folder */
+
+
         try {
             if (!Paths.get(sortedFolder.toString(), "HiddenFiles").toFile().exists()) {
                 Files.createDirectory(Paths.get(sortedFolder.toString(), "HiddenFiles"));
-
-            } else operations.putAllHiddenFilesInHiddenFolder(sortedFolder.toFile(), sortedFolder.toFile());
-        } catch (IOException IOE) {
-            IOE.printStackTrace();
+               operations.putAllHiddenFilesInHiddenFolder(sortedFolder.toFile(), sortedFolder.toFile());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
 
@@ -84,6 +86,15 @@ public class SortingSoftware {
 
 
 }
+
+
+
+
+
+
+
+
+
 
 
 
