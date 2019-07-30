@@ -53,16 +53,7 @@ public class SortingSoftware {
         /* I search all folders if there are any hidden files,
            move them to an appropriate folder */
 
-
-        try {
-            if (!Paths.get(sortedFolder.toString(), "HiddenFiles").toFile().exists()) {
-                Files.createDirectory(Paths.get(sortedFolder.toString(), "HiddenFiles"));
-               operations.putAllHiddenFilesInHiddenFolder(sortedFolder.toFile(), sortedFolder.toFile());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        operations.putAllHiddenFilesInHiddenFolder(sortedFolder.toFile(), sortedFolder.toFile());
 
         /* Looking for empty folders and delete them */
 

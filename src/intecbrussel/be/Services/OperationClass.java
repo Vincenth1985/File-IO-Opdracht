@@ -33,6 +33,12 @@ public class OperationClass implements FolderOperations {
     @Override
     public void putAllHiddenFilesInHiddenFolder(File sourceFolder, File sortedFolder) {
 
+        if (!Paths.get(sortedFolder.toString(), "HiddenFiles").toFile().exists()) {
+            try {
+                Files.createDirectory(Paths.get(sortedFolder.toString(), "HiddenFiles"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             for (File file : sourceFolder.listFiles()) {
                 if (file.isDirectory()) {
                     putAllHiddenFilesInHiddenFolder(file, sortedFolder);
@@ -46,7 +52,9 @@ public class OperationClass implements FolderOperations {
                     }
                 }
 
-    }}
+            }
+        }
+    }
 
 
     @Override
