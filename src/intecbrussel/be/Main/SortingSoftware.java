@@ -14,7 +14,6 @@ public class SortingSoftware {
 
     public static void main(String[] args) {
 
-
         //Path from the unsorted folder.Here we have to give the path from the Unsorted Folder.
         String folder = "/Users/vincenthonca/Desktop/dossier/unsorted";
         Path unsortedFolder = Paths.get(folder);
@@ -37,9 +36,6 @@ public class SortingSoftware {
             unsortedFolder.toFile().renameTo(Paths.get(unsortedFolder.getParent().toString(), "Sorted").toFile());
 
         } else System.out.println("No folder with this name found. Please check the unsorted folder unsortedFolder\n");
-
-
-
 
         /* I write a method that will allow on the basis of a type of file,
            to search in all the folders and sub folders the corresponding files,

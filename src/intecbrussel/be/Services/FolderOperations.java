@@ -17,7 +17,6 @@ public interface FolderOperations {
 
     void moveFileTypeToTargetFolder(File sourceFolder, String fileType, File targetFolder);
 
-
     TreeSet<File> collectFolderToSet(File sourceFolder, TreeSet<File> folderToSummerize);
 
     void summaryToConsole(TreeSet<File> summary);
