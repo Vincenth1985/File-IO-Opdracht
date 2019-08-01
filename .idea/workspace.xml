@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c55ade1-029d-4006-9cea-a9283234e955" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/intecbrussel/be/Main/SortingSoftware.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/intecbrussel/be/Main/SortingSoftware.java" afterDir="false" />
-    </list>
+    <list default="true" id="0c55ade1-029d-4006-9cea-a9283234e955" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +17,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/Main/SortingSoftware.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
+            <state relative-caret-position="240">
               <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -31,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/Services/FolderOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state relative-caret-position="285">
+              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,12 +41,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/Services/OperationClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
+            <state relative-caret-position="315">
               <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getFileType#0;class#OperationClass#0" />
                 <element signature="method#creatingFileTypeFolder#0;class#OperationClass#0" />
+                <element signature="method#putAllHiddenFilesInHiddenFolder#0;class#OperationClass#0" />
+                <element signature="method#deleteEmptyFolders#0;class#OperationClass#0" />
                 <element signature="method#moveFileTypeToTargetFolder#0;class#OperationClass#0" />
                 <element signature="method#collectFolderToSet#0;class#OperationClass#0" />
                 <element signature="method#summaryToConsole#0;class#OperationClass#0" />
@@ -79,6 +79,7 @@
         <option value="$PROJECT_DIR$/src/intecbrussel/be/SortingSoftware.java" />
         <option value="$PROJECT_DIR$/src/intecbrussel/be/Services/OperationClass.java" />
         <option value="$PROJECT_DIR$/src/intecbrussel/be/Main/SortingSoftware.java" />
+        <option value="$PROJECT_DIR$/src/intecbrussel/be/Services/FolderOperations.java" />
       </list>
     </option>
   </component>
@@ -105,19 +106,6 @@
               <item name="File IO Opdracht" type="b2602c69:ProjectViewProjectNode" />
               <item name="File IO Opdracht" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="File IO Opdracht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="File IO Opdracht" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="be" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="File IO Opdracht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="File IO Opdracht" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="be" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -178,7 +166,7 @@
     <frame x="2560" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.33493078" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33493078" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -219,14 +207,26 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/Services/FolderOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/Services/OperationClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
+        <state relative-caret-position="315">
           <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getFileType#0;class#OperationClass#0" />
             <element signature="method#creatingFileTypeFolder#0;class#OperationClass#0" />
+            <element signature="method#putAllHiddenFilesInHiddenFolder#0;class#OperationClass#0" />
+            <element signature="method#deleteEmptyFolders#0;class#OperationClass#0" />
             <element signature="method#moveFileTypeToTargetFolder#0;class#OperationClass#0" />
             <element signature="method#collectFolderToSet#0;class#OperationClass#0" />
             <element signature="method#summaryToConsole#0;class#OperationClass#0" />
@@ -235,19 +235,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/Services/FolderOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/intecbrussel/be/Main/SortingSoftware.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
+        <state relative-caret-position="240">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
